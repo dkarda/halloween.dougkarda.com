@@ -1,0 +1,515 @@
+[
+  {
+    "title": "Alice Cooper",
+    "filename": "alice-cooper",
+    "level": "3",
+    "category": "Music"
+  },
+  {
+    "title": "Angus Young",
+    "title2": "AC/DC",
+    "filename": "angus-young",
+    "level": "3",
+    "category": "Music"
+  },
+  {
+    "title": "Animal",
+    "title2": "The Muppet Show",
+    "filename": "animal-muppets",
+    "level": "2",
+    "category": "TV"
+  },
+  {
+    "title": "Art The Clown",
+    "title2": "Terrifier",
+    "filename": "arttheclown",
+    "level": "4",
+    "category": "Movie"
+  },
+  {
+    "title": "Bald Eagle",
+    "title2": "USA",
+    "filename": "bald-eagle",
+    "level": "3",
+    "category": "Other"
+  },
+  {
+    "title": "Beetlejuice",
+    "filename": "beetlejuice",
+    "level": "4",
+    "category": "Movie"
+  },
+  {
+    "title": "Beetlejuice Snake",
+    "filename": "beetlejuice-snake",
+    "level": "3",
+    "category": "Movie"
+  },
+  {
+    "title": "Bugs Bunny",
+    "title2": "Looney Tunes",
+    "filename": "bugs-bunny",
+    "level": "4",
+    "category": "TV"
+  },
+  {
+    "title": "Cheshire Cat",
+    "title2": "",
+    "filename": "cheshire-cat",
+    "level": "5",
+    "category": ""
+  },
+  {
+    "title": "Chewbacca",
+    "title2": "Star Wars",
+    "filename": "chewbacca",
+    "level": "3",
+    "category": "Movie"
+  },
+  {
+    "title": "Chucky",
+    "title2": "Bride of Chucky",
+    "filename": "chucky",
+    "level": "4",
+    "category": "Movie"
+  },
+  {
+    "title": "Cobra Kai",
+    "title2": "",
+    "filename": "cobra-kai",
+    "level": "5",
+    "category": "TV"
+  },
+  {
+    "title": "Count Von Count",
+    "title2": "",
+    "filename": "count-von-count",
+    "level": "2",
+    "category": "TV"
+  },
+  {
+    "title": "Crypt Keeper",
+    "title2": "Tales from the Crypt",
+    "filename": "cryptkeeper",
+    "level": "4",
+    "category": "TV"
+  },
+  {
+    "title": "Cthulhu",
+    "title2": "H.P. Lovecraft",
+    "filename": "cthulhu",
+    "level": "4",
+    "category": "Literature"
+  },
+  {
+    "title": "Darth Vader",
+    "title2": "Star Wars",
+    "filename": "darthvader",
+    "level": "4",
+    "category": "Movie"
+  },
+  {
+    "title": "Daryl Dixon",
+    "title2": "The Walking Dead",
+    "filename": "daryl-dixon",
+    "level": "4",
+    "category": "TV"
+  },
+  {
+    "title": "Davy Jones",
+    "title2": "Pirates of the Caribbean",
+    "filename": "davy-jones",
+    "level": "5",
+    "category": "Movie"
+  },
+  {
+    "title": "Eddie",
+    "title2": "Iron Maiden",
+    "filename": "eddie",
+    "level": "4",
+    "category": "Music"
+  },
+  {
+    "title": "Elsa",
+    "title2": "Frozen",
+    "filename": "elsa",
+    "level": "3",
+    "category": "Movie"
+  },
+  {
+    "title": "Eye of the Beholder",
+    "title2": "",
+    "filename": "eye-of-the-beholder",
+    "level": "3",
+    "category": ""
+  },
+  {
+    "title": "Freak Show",
+    "title2": "American Horror Story",
+    "filename": "freakshow",
+    "level": "4",
+    "category": "TV"
+  },
+  {
+    "title": "Freddie Mercury",
+    "title2": "",
+    "filename": "freddie-mercury",
+    "level": "4",
+    "category": "Music"
+  },
+  {
+    "title": "Freddy Krueger",
+    "title2": "A Nightmare On Elm Street",
+    "filename": "freddy-krueger",
+    "level": "5",
+    "category": "Movie"
+  },
+  {
+    "title": "Gandalf",
+    "title2": "Lord of the Rings",
+    "filename": "gandalf",
+    "level": "4",
+    "category": "Movie"
+  },
+  {
+    "title": "Gizmo",
+    "title2": "Gremlins",
+    "filename": "gizmo",
+    "level": "4",
+    "category": "Movie"
+  },
+  {
+    "title": "Grim Reaper",
+    "title2": "Death",
+    "filename": "grim-reaper",
+    "level": "5",
+    "category": "Other"
+  },
+  {
+    "title": "Haunted House",
+    "title2": "DO NOT ENTER",
+    "filename": "haunted-house",
+    "level": "4",
+    "category": "Other"
+  },
+  {
+    "title": "House Stark Sigil",
+    "title2": "Game of Thrones",
+    "filename": "house-stark-sigil",
+    "level": "5",
+    "category": "TV"
+  },
+  {
+    "title": "Immortal Mask",
+    "title2": "300",
+    "filename": "300-immortal",
+    "level": "3",
+    "category": "Movie"
+  },
+  {
+    "title": "Jack O' Lantern",
+    "title2": "Sleepy Hollow",
+    "filename": "jack-o-lantern",
+    "level": "1",
+    "category": "Other"
+  },
+  {
+    "title": "Jack and Sally",
+    "title2": "The Nightmare Before Christmas",
+    "filename": "jack-and-sally",
+    "level": "4",
+    "category": "Movie"
+  },
+  {
+    "title": "Jack Skellington",
+    "title2": "The Nightmare Before Christmas",
+    "filename": "jack-skellington",
+    "level": "4",
+    "category": "Movie"
+  },
+  {
+    "title": "Jack Sparrow",
+    "title2": "Pirates of the Caribbean",
+    "filename": "jack-sparrow",
+    "level": "3",
+    "category": "Movie"
+  },
+  {
+    "title": "Jaws",
+    "filename": "jaws",
+    "level": "5",
+    "category": "Movie"
+  },
+  {
+    "title": "Joker - Arkham Asylum",
+    "title2": "Batman",
+    "filename": "joker-asylum",
+    "level": "4",
+    "category": "Video Game"
+  },
+  {
+    "title": "Joker - Cesar Romero",
+    "title2": "Batman",
+    "filename": "joker-romero",
+    "level": "4",
+    "category": "TV"
+  },
+  {
+    "title": "Leatherface",
+    "title2": "The Texas Chainsaw Massacre",
+    "filename": "leatherface",
+    "level": "4",
+    "category": "Movie"
+  },
+  {
+    "title": "Leap of Wraith",
+    "title2": "",
+    "filename": "leapofwraith",
+    "level": "4",
+    "category": "Other"
+  },
+  {
+    "title": "Lock, Shock and Barrel",
+    "title2": "The Nightmare Before Christmas",
+    "filename": "lock-shock-barrel",
+    "level": "5",
+    "category": "Movie"
+  },
+  {
+    "title": "Mad Hatter",
+    "title2": "Alice In Wonderland",
+    "filename": "mad-hatter",
+    "level": "4",
+    "category": "Movie"
+  },
+  {
+    "title": "Mars Attacks",
+    "title2": "",
+    "filename": "mars-attacks",
+    "level": "5",
+    "category": "Movie"
+  },
+  {
+    "title": "Michael Myers",
+    "title2": "Halloween",
+    "filename": "michael-myers",
+    "level": "3",
+    "category": "Movie"
+  },
+  {
+    "title": "Minion",
+    "title2": "Despicable Me",
+    "filename": "minion",
+    "level": "3",
+    "category": "Movie"
+  },
+  {
+    "title": "Negan",
+    "title2": "",
+    "filename": "negan",
+    "level": "4",
+    "category": "TV"
+  },
+  {
+    "title": "Night King",
+    "title2": "",
+    "filename": "night-king",
+    "level": "5",
+    "category": "TV"
+  },
+  {
+    "title": "Olaf",
+    "title2": "Frozen",
+    "filename": "olaf",
+    "level": "2",
+    "category": "Movie"
+  },
+  {
+    "title": "One-Eyed Willy",
+    "title2": "The Goonies",
+    "filename": "oneeyedwilly",
+    "level": "4",
+    "category": "Movie"
+  },
+  {
+    "title": "Papa Emeritus II",
+    "title2": "Ghost",
+    "filename": "papa-emeritus-ii",
+    "level": "4",
+    "category": "Music"
+  },
+  {
+    "title": "Pennywise",
+    "title2": "IT",
+    "filename": "pennywise",
+    "level": "4",
+    "category": "Movie"
+  },
+  {
+    "title": "Pet Sematary",
+    "title2": "",
+    "filename": "pet-sematary",
+    "level": "5",
+    "category": "Movie"
+  },
+  {
+    "title": "Phoenix",
+    "title2": "Rebirth",
+    "filename": "phoenix",
+    "level": "4",
+    "category": "Other"
+  },
+  {
+    "title": "Predator",
+    "title2": "",
+    "filename": "predator",
+    "level": "5",
+    "category": "Movie"
+  },
+  {
+    "title": "Regan MacNeil",
+    "title2": "The Exorcist",
+    "filename": "regan-macneil",
+    "level": "4",
+    "category": "Movie"
+  },
+  {
+    "title": "Rob Zombie",
+    "title2": "Hellbilly Deluxe",
+    "filename": "hellbilly-deluxe",
+    "level": "3",
+    "category": "Music"
+  },
+  {
+    "title": "Rolling Stones",
+    "title2": "",
+    "filename": "rolling-stones",
+    "level": "1",
+    "category": "Music"
+  },
+  {
+    "title": "Severus Snape",
+    "title2": "Harry Potter",
+    "filename": "severus-snape",
+    "level": "3",
+    "category": "Movie"
+  },
+  {
+    "title": "Sam",
+    "title2": "Trick 'R Treat",
+    "filename": "sam",
+    "level": "4",
+    "category": "Movie"
+  },
+  {
+    "title": "Shrek",
+    "title2": "",
+    "filename": "shrek",
+    "level": "3",
+    "category": "Movie"
+  },
+  {
+    "title": "Slimer",
+    "title2": "Ghostbusters",
+    "filename": "slimer",
+    "level": "4",
+    "category": "Movie"
+  },
+  {
+    "title": "Stripe",
+    "title2": "Gremlins",
+    "filename": "stripe",
+    "level": "4",
+    "category": "Movie"
+  },
+  {
+    "title": "Sweeney Todd",
+    "title2": "",
+    "filename": "sweeney-todd",
+    "level": "3",
+    "category": "Movie"
+  },
+  {
+    "title": "Sweetums",
+    "title2": "The Muppet Show",
+    "filename": "sweetums",
+    "level": "4",
+    "category": "TV"
+  },
+  {
+    "title": "The Crow",
+    "title2": "Eric Draven",
+    "filename": "the-crow",
+    "level": "3",
+    "category": "Movie"
+  },
+  {
+    "title": "The Thing",
+    "filename": "the-thing",
+    "level": "4",
+    "category": "Movie"
+  },
+  {
+    "title": "Twisty The Clown",
+    "title2": "American Horror Story",
+    "filename": "twisty-the-clown",
+    "level": "4",
+    "category": "TV"
+  },
+  {
+    "title": "Venom",
+    "title2": "",
+    "filename": "venom",
+    "level": "4",
+    "category": "Movie"
+  },
+  {
+    "title": "Vincent Price",
+    "title2": "",
+    "filename": "vincent-price",
+    "level": "3",
+    "category": "Other"
+  },
+  {
+    "title": "Walter White",
+    "title2": "Breaking Bad",
+    "filename": "walter-white",
+    "level": "3",
+    "category": "TV"
+  },
+  {
+    "title": "Werewolf",
+    "title2": "The Lycanthrope",
+    "filename": "werewolf",
+    "level": "2",
+    "category": "Other"
+  },
+  {
+    "title": "Willy Wonka",
+    "title2": "",
+    "filename": "willy-wonka",
+    "level": "4",
+    "category": "Movie"
+  },
+  {
+    "title": "Witch Hazel",
+    "title2": "Looney Tunes",
+    "filename": "witchhazel",
+    "level": "4",
+    "category": "TV"
+  },
+  {
+    "title": "Xenomorph",
+    "title2": "Alien",
+    "filename": "xenomorph",
+    "level": "5",
+    "category": "Movie"
+  },
+  {
+    "title": "Zero",
+    "title2": "A Nightmare Before Christmas",
+    "filename": "zero",
+    "level": "1",
+    "category": "Movie"
+  }
+]

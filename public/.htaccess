@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+
+<IfModule mod_headers.c>
+  SetEnvIf Request_URI "^/stencils" STENCILS_NOINDEX
+  SetEnvIf Request_URI "^/images/stencils/" STENCILS_NOINDEX
+  Header set X-Robots-Tag "noindex, nofollow" env=STENCILS_NOINDEX
+</IfModule>

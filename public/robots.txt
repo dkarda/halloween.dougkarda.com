@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /stencils
+Disallow: /images/stencils/

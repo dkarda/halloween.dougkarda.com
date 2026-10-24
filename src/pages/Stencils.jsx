@@ -1,4 +1,6 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
+import { carvingByStencil } from "../data/carvings.js";
 import stencils from "../data/stencils.json";
 
 const ASSET = "/images/stencils";
@@ -14,32 +16,52 @@ function StencilCard({ stencil }) {
   const level = Number(stencil.level) || 0;
   const pdf = `${ASSET}/${stencil.filename}.pdf`;
   const png = `${ASSET}/${stencil.filename}.png`;
+  const carved = carvingByStencil.get(stencil.filename);
 
   return (
-    <li>
-      <a
-        href={pdf}
-        target="_blank"
-        rel="noreferrer"
-        className="flex h-full flex-col border border-white/10 bg-ash p-3 transition hover:border-pumpkin hover:bg-[#211812]"
+    <li id={stencil.filename} className="scroll-mt-24">
+      <article
+        className={`flex h-full flex-col border bg-ash p-3 ${
+          carved ? "border-ember/50" : "border-white/10"
+        }`}
       >
-        <div className="flex h-36 items-center justify-center bg-black/50">
-          {failed ? (
-            <span className="font-display text-4xl text-pumpkin/70" aria-hidden="true">
-              {stencil.title.slice(0, 1)}
-            </span>
-          ) : (
-            <img
-              src={png}
-              alt=""
-              loading="lazy"
-              onError={() => setFailed(true)}
-              className="max-h-32 max-w-full object-contain"
-            />
-          )}
-        </div>
-        <h2 className="mt-3 font-display text-2xl leading-none text-bone">{stencil.title}</h2>
-        {stencil.title2 ? <p className="mt-1 text-sm text-bone/60">{stencil.title2}</p> : null}
+        <a
+          href={pdf}
+          target="_blank"
+          rel="noreferrer"
+          className="flex flex-1 flex-col transition hover:text-ember"
+        >
+          <div className="relative flex h-36 items-center justify-center bg-black/50">
+            {carved ? (
+              <span className="absolute top-2 left-2 bg-ember px-1.5 py-0.5 text-[10px] font-bold tracking-[0.14em] text-night uppercase">
+                Carved
+              </span>
+            ) : null}
+            {failed ? (
+              <span className="font-display text-4xl text-pumpkin/70" aria-hidden="true">
+                {stencil.title.slice(0, 1)}
+              </span>
+            ) : (
+              <img
+                src={png}
+                alt=""
+                loading="lazy"
+                onError={() => setFailed(true)}
+                className="max-h-32 max-w-full object-contain"
+              />
+            )}
+          </div>
+          <h2 className="mt-3 font-display text-2xl leading-none text-bone">{stencil.title}</h2>
+          {stencil.title2 ? <p className="mt-1 text-sm text-bone/60">{stencil.title2}</p> : null}
+        </a>
+        {carved ? (
+          <Link
+            to={`/#${carved.id}`}
+            className="mt-2 text-[11px] font-semibold tracking-[0.16em] text-ember uppercase hover:text-pumpkin"
+          >
+            See {carved.year} carving
+          </Link>
+        ) : null}
         <p className="mt-auto pt-3 text-[11px] font-semibold tracking-[0.16em] text-ember uppercase">
           {category}
         </p>
@@ -54,7 +76,7 @@ function StencilCard({ stencil }) {
             ))}
           </span>
         </p>
-      </a>
+      </article>
     </li>
   );
 }
@@ -63,6 +85,7 @@ export default function Stencils() {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("All");
   const [level, setLevel] = useState("All");
+  const [done, setDone] = useState("All");
 
   const categories = useMemo(() => {
     const present = new Set(stencils.map(categoryOf));
@@ -75,16 +98,29 @@ export default function Stencils() {
     const needle = query.trim().toLowerCase();
     return stencils
       .filter((stencil) => {
+        const carved = carvingByStencil.has(stencil.filename);
         if (category !== "All" && categoryOf(stencil) !== category) return false;
         if (level !== "All" && String(stencil.level) !== level) return false;
+        if (done === "Carved" && !carved) return false;
+        if (done === "Not yet" && carved) return false;
         if (!needle) return true;
         return `${stencil.title} ${stencil.title2 ?? ""}`.toLowerCase().includes(needle);
       })
       .slice()
       .sort((a, b) => a.title.localeCompare(b.title));
-  }, [query, category, level]);
+  }, [query, category, level, done]);
 
-  const filtersActive = query.trim() !== "" || category !== "All" || level !== "All";
+  const carvedCount = carvingByStencil.size;
+  const filtersActive =
+    query.trim() !== "" || category !== "All" || level !== "All" || done !== "All";
+
+  useEffect(() => {
+    const id = window.location.hash.replace("#", "");
+    if (!id) return;
+    const node = document.getElementById(id);
+    if (!node) return;
+    requestAnimationFrame(() => node.scrollIntoView());
+  }, []);
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
@@ -117,6 +153,7 @@ export default function Stencils() {
                 setQuery("");
                 setCategory("All");
                 setLevel("All");
+                setDone("All");
               }}
               className="cursor-pointer self-start text-sm font-semibold tracking-wide text-pumpkin uppercase hover:text-ember"
             >
@@ -139,6 +176,27 @@ export default function Stencils() {
               }`}
             >
               {name}
+            </button>
+          ))}
+        </div>
+
+        <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Carved">
+          <span className="text-xs font-semibold tracking-[0.16em] text-bone/50 uppercase">
+            Carved
+          </span>
+          {["All", "Carved", "Not yet"].map((value) => (
+            <button
+              key={value}
+              type="button"
+              aria-pressed={done === value}
+              onClick={() => setDone(value)}
+              className={`cursor-pointer border px-3 py-1 text-sm font-semibold ${
+                done === value
+                  ? "border-ember bg-ember text-night"
+                  : "border-white/15 text-bone/80 hover:border-pumpkin hover:text-pumpkin"
+              }`}
+            >
+              {value}
             </button>
           ))}
         </div>
@@ -167,6 +225,9 @@ export default function Stencils() {
 
       <p className="mt-8 text-sm text-bone/60">
         {visible.length} {visible.length === 1 ? "pattern" : "patterns"}
+        {done === "All" && !query.trim() && category === "All" && level === "All"
+          ? ` · ${carvedCount} carved`
+          : ""}
       </p>
 
       {visible.length === 0 ? (

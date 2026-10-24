@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Lightbox from "../components/Lightbox.jsx";
 import { carvings, carvingSrc, photoSources } from "../data/carvings.js";
 
@@ -171,6 +172,14 @@ export default function Gallery() {
                     Click to enlarge
                   </span>
                 </button>
+                {carving.stencil ? (
+                  <Link
+                    to={`/stencils#${carving.stencil}`}
+                    className="mt-3 inline-block text-[11px] font-semibold tracking-[0.22em] text-ember uppercase hover:text-pumpkin"
+                  >
+                    Stencil
+                  </Link>
+                ) : null}
               </div>
             </div>
           </section>

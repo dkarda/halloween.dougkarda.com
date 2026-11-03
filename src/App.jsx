@@ -1,5 +1,6 @@
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
+import Friends from "./pages/Friends.jsx";
 import Gallery from "./pages/Gallery.jsx";
 import Stencils from "./pages/Stencils.jsx";
 import Tips from "./pages/Tips.jsx";
@@ -26,6 +27,7 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Gallery />} />
+          <Route path="friends" element={<Friends />} />
           <Route path="tips" element={<Tips />} />
           <Route path="stencils" element={<Stencils />} />
           <Route path="*" element={<NotFound />} />

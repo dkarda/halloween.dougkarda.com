@@ -23,6 +23,17 @@ export const icons = {
 
 export const carvings = [
   {
+    id: "2026",
+    year: "2026",
+    title: "Vincent Price",
+    photo: "2026-pumpkin-vincent-price",
+    photoExts: ["webp"],
+    stencil: "vincent-price",
+    background: "bg-vincent-price",
+    align: "start",
+    accent: "bat",
+  },
+  {
     id: "2025",
     year: "2025",
     title: "Regan MacNeil",

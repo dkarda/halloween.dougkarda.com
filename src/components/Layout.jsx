@@ -3,6 +3,7 @@ import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 
 const links = [
   { to: "/", label: "Carvings", end: true },
+  { to: "/friends", label: "Friends" },
   { to: "/tips", label: "Tips" },
   { to: "/stencils", label: "Stencils" },
 ];
@@ -44,6 +45,7 @@ export default function Layout() {
   useEffect(() => {
     const titles = {
       "/": "Pumpkin Carvings · Halloween · Doug Karda",
+      "/friends": "Friends · Halloween · Doug Karda",
       "/tips": "Carving Tips · Halloween · Doug Karda",
       "/stencils": "Stencils · Halloween · Doug Karda",
     };

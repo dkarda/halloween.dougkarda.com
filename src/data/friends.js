@@ -38,10 +38,10 @@ export const friendYears = mergeFriendYears([
     year: "2026",
     photos: [
       {
-        id: "2026-billy-two-face",
-        title: "Two-Face",
+        id: "2026-billy-two-faced",
+        title: "Two-Faced",
         carver: "Billy",
-        photo: "2026-billy-two-face",
+        photo: "2026-billy-two-faced",
         photoExts: ["webp"],
       },
     ],
